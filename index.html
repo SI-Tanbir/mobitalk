@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PhoneHaven</title>
+    <!-- adding daisy ui and tailwind -->
+
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.14/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+
+<body>
+
+
+    <header>
+        <h3 class="text-5xl text-center bg-purple-500  ">PhoneHaven </h3>
+    </header>
+
+    <main>
+        <div class="" id="searchcontaner">
+            <input type="text" id="searchInput" placeholder="Search" class="input input-bordered w-full max-w-xs" />
+            <button onclick="phonesearch()" class="btn btn-primary">Search</button>
+        </div>
+
+
+
+<!-- loading spinner -->
+ <div id="loading-spinner" class="hidden" >
+   
+    <span class="loading loading-spinner loading-lg w-full"></span>
+</div>
+
+
+        <div id="phone-container" class="grid grid-cols-1 md:grid-cols-2  lg:grid-cols-3">
+
+
+
+
+        </div>
+<!-- show all buttion here -->
+        <button id="showall" class="hidden mt-3 btn btn-primary">Show all</button>
+
+<!-- starting of modal -->
+<!-- Open the modal using ID.showModal() method -->
+
+<dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
+  <div class="modal-box" >
+
+    <h3 class="text-lg font-bold">Hello!</h3>
+   <!-- extra dynamic information added here -->
+    <div id="modal-details">
+
+
+    </div>
+    <div class="modal-action">
+      <form method="dialog">
+        <!-- if there is a button in form, it will close the modal -->
+        <button onclick="removeModalChild()" class="btn">Close</button>
+      </form>
+    </div>
+  </div>
+</dialog>
+
+
+
+
+    </main>
+
+    <footer></footer>
+
+
+
+    <script src="./js/phone.js"></script>
+</body>
+
+</html>
